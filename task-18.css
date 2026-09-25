@@ -1,0 +1,381 @@
+/* ================= BASIC RESET ================= */
+/*  Remove the default margin and padding
+    added by the browser.  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fffaf5;
+    line-height: 1.6;
+}
+/* ================= HEADER ================= */
+header {
+    background: #4b2118;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* Restaurant logo */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+nav a:hover {
+    color: #ffd28a;
+}
+/* ================= HERO ================= */
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(
+            rgba(50, 20, 10, 0.65),
+            rgba(50, 20, 10, 0.65)
+        ),
+        linear-gradient(
+            135deg,
+            #d89b6b,
+            #8c4b2e
+        );
+}
+.hero-content {
+    max-width: 750px;
+    color: white;
+}
+.small-heading {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.hero h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+.hero-button {
+    display: inline-block;
+    background: #f0a44b;
+    color: #3c1d12;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero-button:hover {
+    background: #ffd28a;
+}
+/* ================= COMMON SECTION ================= */
+section {
+    padding: 60px 20px;
+}
+section > h2 {
+    text-align: center;
+    color: #4b2118;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+.light-section {
+    background: #fff0df;
+}
+/* ================= ABOUT ================= */
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+.about-text {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+.about-text p {
+    margin-bottom: 15px;
+}
+.about-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.about-box div {
+    background: #4b2118;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+.about-box h3 {
+    font-size: 25px;
+}
+/* ================= MENU BUTTONS ================= */
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.menu-buttons button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #4b2118;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.menu-buttons button:hover {
+    background: #d47d31;
+}
+/* ================= MENU ================= */
+.menu-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.menu-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+.menu-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.menu-card h3 {
+    color: #4b2118;
+    margin-bottom: 8px;
+}
+.menu-card p {
+    margin-bottom: 10px;
+}
+.price {
+    color: #c25a19;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* ================= SERVICES ================= */
+.services-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.service-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.service-card h3 {
+    color: #4b2118;
+    margin-bottom: 8px;
+}
+/* ================= GALLERY ================= */
+.gallery-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.gallery-item {
+    height: 180px;
+    background: #d99a67;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    transition: transform 0.2s;
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+.gallery-item span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b2118;
+    margin-top: 8px;
+}
+/* ================= BOOKING ================= */
+#booking {
+    background: #fffaf5;
+}
+form {
+    max-width: 550px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+}
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #4b2118;
+}
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #4b2118;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form button:hover {
+    background: #d47d31;
+}
+/* Booking confirmation */
+#bookingMessage {
+    max-width: 550px;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* ================= CONTACT ================= */
+.contact-section {
+    background: #fff0df;
+}
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.contact-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+.contact-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.contact-card h3 {
+    color: #4b2118;
+    margin-bottom: 8px;
+}
+/* ================= FOOTER ================= */
+footer {
+    background: #4b2118;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+footer h3 {
+    margin-bottom: 8px;
+}
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 900px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    /* Mobile header */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    /* Hero */
+    .hero h1 {
+        font-size: 35px;
+    }
+    /* About */
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+    /* Menu */
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+    /* Services */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    /* Gallery */
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    /* Contact */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the website responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden Restaurant</title>
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="task-18.css">
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <!-- Restaurant name -->
+        <div class="logo">
+            Spice Garden
+        </div>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#booking">Book Table</a>
+        </nav>
+    </header>
+    <!-- ================= HOME ================= -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="small-heading">
+                Welcome to
+            </p>
+            <h1>
+                Spice Garden Restaurant
+            </h1>
+            <p>
+                Delicious food, warm atmosphere
+                and memorable dining experiences.
+            </p>
+            <!-- Button takes the user to menu -->
+            <a href="#menu" class="hero-button">
+                View Our Menu
+            </a>
+        </div>
+    </section>
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+        <h2>
+            About Us
+        </h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    Spice Garden is a friendly restaurant
+                    serving freshly prepared dishes made
+                    with quality ingredients.
+                </p>
+                <p>
+                    Our goal is to provide delicious food,
+                    comfortable surroundings and excellent
+                    customer service.
+                </p>
+            </div>
+            <!-- Restaurant information -->
+            <div class="about-box">
+                <div>
+                    <h3>10+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div>
+                    <h3>50+</h3>
+                    <p>Menu Items</p>
+                </div>
+                <div>
+                    <h3>5000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= MENU ================= -->
+    <section id="menu" class="light-section">
+        <h2>
+            Our Menu
+        </h2>
+        <!-- Menu category buttons -->
+        <div class="menu-buttons">
+            <button onclick="filterMenu('all')">
+                All
+            </button>
+            <button onclick="filterMenu('starter')">
+                Starters
+            </button>
+            <button onclick="filterMenu('main')">
+                Main Course
+            </button>
+            <button onclick="filterMenu('dessert')">
+                Desserts
+            </button>
+            <button onclick="filterMenu('drink')">
+                Drinks
+            </button>
+        </div>
+        <!-- Menu items -->
+        <div id="menuContainer" class="menu-container">
+        </div>
+    </section>
+    <!-- ================= SERVICES ================= -->
+    <section id="services">
+        <h2>
+            Our Services
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    🍽️
+                </div>
+                <h3>
+                    Dine-In
+                </h3>
+                <p>
+                    Enjoy freshly prepared food
+                    in a comfortable environment.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    🛵
+                </div>
+                <h3>
+                    Home Delivery
+                </h3>
+                <p>
+                    Order your favourite dishes
+                    and enjoy them at home.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    🎉
+                </div>
+                <h3>
+                    Party & Events
+                </h3>
+                <p>
+                    We provide special arrangements
+                    for parties and events.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    🪑
+                </div>
+                <h3>
+                    Table Reservation
+                </h3>
+                <p>
+                    Reserve your table in advance
+                    for a comfortable dining experience.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ================= GALLERY ================= -->
+    <section id="gallery" class="light-section">
+        <h2>
+            Food Gallery
+        </h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                🍕
+                <span>Special Pizza</span>
+            </div>
+            <div class="gallery-item">
+                🍝
+                <span>Italian Pasta</span>
+            </div>
+            <div class="gallery-item">
+                🍛
+                <span>Indian Thali</span>
+            </div>
+            <div class="gallery-item">
+                🥗
+                <span>Fresh Salad</span>
+            </div>
+            <div class="gallery-item">
+                🍰
+                <span>Chocolate Cake</span>
+            </div>
+            <div class="gallery-item">
+                🥤
+                <span>Fresh Drinks</span>
+            </div>
+        </div>
+    </section>
+    <!-- ================= TABLE BOOKING ================= -->
+    <section id="booking">
+        <h2>
+            Book a Table
+        </h2>
+        <form id="bookingForm">
+            <!-- Customer name -->
+            <label for="customerName">
+                Your Name
+            </label>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+            <!-- Email -->
+            <label for="customerEmail">
+                Email
+            </label>
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Enter your email"
+                required
+            >
+            <!-- Phone -->
+            <label for="customerPhone">
+                Phone Number
+            </label>
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Enter your phone number"
+                required
+            >
+            <!-- Date -->
+            <label for="bookingDate">
+                Date
+            </label>
+            <input
+                type="date"
+                id="bookingDate"
+                required
+            >
+            <!-- Time -->
+            <label for="bookingTime">
+                Time
+            </label>
+            <input
+                type="time"
+                id="bookingTime"
+                required
+            >
+            <!-- Number of guests -->
+            <label for="guests">
+                Number of Guests
+            </label>
+            <select id="guests" required>
+                <option value="">
+                    Select guests
+                </option>
+                <option value="1">
+                    1 Person
+                </option>
+                <option value="2">
+                    2 People
+                </option>
+                <option value="3">
+                    3 People
+                </option>
+                <option value="4">
+                    4 People
+                </option>
+                <option value="5">
+                    5 People
+                </option>
+                <option value="6+">
+                    6+ People
+                </option>
+            </select>
+            <!-- Submit button -->
+            <button type="submit">
+                Book My Table
+            </button>
+        </form>
+        <!-- Booking confirmation message -->
+        <div id="bookingMessage">
+        </div>
+    </section>
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact-section">
+        <h2>
+            Contact Us
+        </h2>
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    📍
+                </div>
+                <h3>
+                    Address
+                </h3>
+                <p>
+                    25 Main Street, New Delhi
+                </p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    📞
+                </div>
+                <h3>
+                    Phone
+                </h3>
+                <p>
+                    +91 98765 43210
+                </p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    ✉️
+                </div>
+                <h3>
+                    Email
+                </h3>
+                <p>
+                    info@spicegarden.com
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h3>
+            Spice Garden Restaurant
+        </h3>
+        <p>
+            Good Food • Good Mood • Good Memories
+        </p>
+        <p>
+            © 2026 Spice Garden. All Rights Reserved.
+        </p>
+    </footer>
+    <!-- Connect JavaScript -->
+    <script src="task-18.js"></script>
+</body>
+</html>
